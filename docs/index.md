@@ -1,6 +1,10 @@
-# Geotutorial Index
+---
+title:  Geotutorial Index
+date: 2018-03-24 22:49:00
+description: Our Geo-tutorial at The International Conference of Information Systems for Crisis Response and Management (ISCRAM) 2018 at Rochester Institute of Technology (RIT), Rochester, NY.
+---
 
-## "Location Extraction and Georeferencing in Social Media: Challenges, Techniques, and Applications"
+# "Location Extraction and Georeferencing in Social Media: Challenges, Techniques, and Applications"
 
 Ability to extract or estimate location in social media content, and perform location-centric analyses offer unique and wide-ranging applications. Examples include disaster management, demographic and socio-cultural studies, and spatiotemporal tracking. For instance, location information is critical to reach and rescue disaster-stricken people and dispatch humanitarian assistance. Consequently, there is a pressing need for better understanding of how people express location information explicitly and implicitly on social media, and in general, develop efficient techniques for geospatial computing that spans all information channels. Additionally, location information enables a variety of individual-level and community-level analyses.
 
