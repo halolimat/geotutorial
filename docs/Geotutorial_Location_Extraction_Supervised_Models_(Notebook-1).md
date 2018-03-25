@@ -5,6 +5,8 @@ source: "github.com/halolimat"
 
 ---
 
+# Geotutorial: Location Extraction using Supervised Models (Notebook-1)
+
 ### Dataset we will be using:
 
 #### 2017 The 3rd Workshop on Noisy User-generated Text (W-NUT): Emerging and Rare Entities task: http://noisy-text.github.io/2017/
