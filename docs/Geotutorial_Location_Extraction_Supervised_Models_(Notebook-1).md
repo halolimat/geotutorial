@@ -1,11 +1,6 @@
----
-title: Geotutorial: Location Extraction using Supervised Models (Notebook-1)
-author: Hussein S. Al-Olimat
-source: "github.com/halolimat"
+# Geotutorial - Hands-on - 1
 
----
-
-# Geotutorial: Location Extraction using Supervised Models (Notebook-1)
+## Geotutorial: Location Extraction using Supervised Models (Notebook-1)
 
 ### Dataset we will be using:
 
