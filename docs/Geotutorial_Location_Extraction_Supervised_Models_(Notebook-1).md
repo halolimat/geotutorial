@@ -1,14 +1,8 @@
-
-![image.png](attachment:image.png)
-
-------
-
-<center><h1>Location Extraction and Georeferencing in Social Media</h1></center>
-<center><h3>Challenges, Techniques, and Applications</h3></center>
-
-------
-
-------
+---
+title:  "Geotutorial: Location Extraction using Supervised Models (Notebook-1)"
+date:   2018-03-24 22:49:00
+description: Hands-on Session in our Geo-tutorial at The International Conference of Information Systems for Crisis Response and Management (ISCRAM) 2018 at Rochester Institute of Technology (RIT), Rochester, NY.
+---
 
 ### Dataset we will be using:
 
@@ -34,7 +28,7 @@ WNUT17_train = [unicode(x.replace("\n","").decode("utf8")) for x in urllib2.urlo
 WNUT17_test = [unicode(x.replace("\n","").decode("utf8")) for x in urllib2.urlopen(WNUT17_test).readlines()]
 ```
 
-### Let's peak at the data: 
+### Let's peak at the data:
 Tagged using [**Inside–outside–beginning encoding**](http://link.hussein.space/iob_encoding)
 
 
@@ -58,14 +52,14 @@ for line in WNUT17_dev[13:23]:
 ----
 #### Definitions of some of the entity classes in WNUT-17:
 
-- **Location** : 
+- **Location** :
     * Names that are locations (e.g. France). Don't mark locations that don't have their own name. Include punctuation in the middle of names. Fictional locations can be included, as long as they're referred to by name (e.g. "Hogwarts").
     * Examples:
         * "There was a celebration in London"
         * "The room** is empty" Wrong, because room isn't the name of a particular location
 
 
-- **Corporation** : 
+- **Corporation** :
     * Names of corporations (e.g. Google). Don't mark locations that don't have their own name. Include punctuation in the middle of names.
     * Examples:
         * "Stock in Tesla is soaring"
@@ -94,10 +88,10 @@ def keep_class(c, l):
     else:
         word = l.split("\t")[0]
         tag = l.split("\t")[1]
-        
+
         if c not in tag:
             tag = "O"
-            
+
         return word + "\t" + tag
 ```
 
@@ -113,7 +107,7 @@ for line in WNUT17_dev[41:51]:
     and	I-creative-work
     Morty	I-creative-work
     😂	O
-    
+
     wow	O
     emma	B-person
     and	O
@@ -139,7 +133,7 @@ for line in WNUT17_dev[41:51]:
     and	O
     Morty	O
     😂	O
-    
+
     wow	O
     emma	O
     and	O
@@ -164,18 +158,18 @@ def convert_conll_to_json(labeled_data):
     # convert labeled data into a string to tokenize it into docs
     labeled_data_str = "\n".join(labeled_data)
     labeled_data_docs = labeled_data_str.split("\n\n")
-    
+
     output_docs = []
-    
+
     for d in labeled_data_docs:
         words, iob_ents = zip(*[line.split('\t') for line in d.split("\n")])
         biluo_ents = iob_to_biluo(iob_ents)
-        
+
         output_docs.append({
             'id': len(output_docs),
             'paragraphs': [{'sentences': [{'tokens': [{'orth': w, 'ner': ent} for (w, ent) in zip(words, biluo_ents) ]}]}]
         })
-    
+
     return output_docs
 ```
 
@@ -196,9 +190,9 @@ print WNUT17_test_json[:1]
 ```
 
     [{'id': 0, 'paragraphs': [{'sentences': [{'tokens': [{'ner': u'O', 'orth': u'Stabilized'}, {'ner': u'O', 'orth': u'approach'}, {'ner': u'O', 'orth': u'or'}, {'ner': u'O', 'orth': u'not'}, {'ner': u'O', 'orth': u'?'}, {'ner': u'O', 'orth': u'That'}, {'ner': u'O', 'orth': u'\xb4'}, {'ner': u'O', 'orth': u's'}, {'ner': u'O', 'orth': u'insane'}, {'ner': u'O', 'orth': u'and'}, {'ner': u'O', 'orth': u'good'}, {'ner': u'O', 'orth': u'.'}]}]}]}]
-    
+
     [{'id': 0, 'paragraphs': [{'sentences': [{'tokens': [{'ner': u'O', 'orth': u'@paulwalk'}, {'ner': u'O', 'orth': u'It'}, {'ner': u'O', 'orth': u"'s"}, {'ner': u'O', 'orth': u'the'}, {'ner': u'O', 'orth': u'view'}, {'ner': u'O', 'orth': u'from'}, {'ner': u'O', 'orth': u'where'}, {'ner': u'O', 'orth': u'I'}, {'ner': u'O', 'orth': u"'m"}, {'ner': u'O', 'orth': u'living'}, {'ner': u'O', 'orth': u'for'}, {'ner': u'O', 'orth': u'two'}, {'ner': u'O', 'orth': u'weeks'}, {'ner': u'O', 'orth': u'.'}, {'ner': u'B-location', 'orth': u'Empire'}, {'ner': u'I-location', 'orth': u'State'}, {'ner': u'L-location', 'orth': u'Building'}, {'ner': u'O', 'orth': u'='}, {'ner': u'U-location', 'orth': u'ESB'}, {'ner': u'O', 'orth': u'.'}, {'ner': u'O', 'orth': u'Pretty'}, {'ner': u'O', 'orth': u'bad'}, {'ner': u'O', 'orth': u'storm'}, {'ner': u'O', 'orth': u'here'}, {'ner': u'O', 'orth': u'last'}, {'ner': u'O', 'orth': u'evening'}, {'ner': u'O', 'orth': u'.'}]}]}]}]
-    
+
     [{'id': 0, 'paragraphs': [{'sentences': [{'tokens': [{'ner': u'O', 'orth': u'&'}, {'ner': u'O', 'orth': u'gt'}, {'ner': u'O', 'orth': u';'}, {'ner': u'O', 'orth': u'*'}, {'ner': u'O', 'orth': u'The'}, {'ner': u'O', 'orth': u'soldier'}, {'ner': u'O', 'orth': u'was'}, {'ner': u'O', 'orth': u'killed'}, {'ner': u'O', 'orth': u'when'}, {'ner': u'O', 'orth': u'another'}, {'ner': u'O', 'orth': u'avalanche'}, {'ner': u'O', 'orth': u'hit'}, {'ner': u'O', 'orth': u'an'}, {'ner': u'O', 'orth': u'army'}, {'ner': u'O', 'orth': u'barracks'}, {'ner': u'O', 'orth': u'in'}, {'ner': u'O', 'orth': u'the'}, {'ner': u'O', 'orth': u'northern'}, {'ner': u'O', 'orth': u'area'}, {'ner': u'O', 'orth': u'of'}, {'ner': u'U-location', 'orth': u'Sonmarg'}, {'ner': u'O', 'orth': u','}, {'ner': u'O', 'orth': u'said'}, {'ner': u'O', 'orth': u'a'}, {'ner': u'O', 'orth': u'military'}, {'ner': u'O', 'orth': u'spokesman'}, {'ner': u'O', 'orth': u'.'}]}]}]}]
 
 
@@ -210,47 +204,47 @@ from spacy.tokens.doc import Doc
 
 def train_model(labeled_data, n_iter=20):
     """Set up the pipeline and entity recognizer, and train the new entity."""
-    
+
     # create blank Language class    
     nlp = spacy.blank('en')  # create blank Language class
     print("Created blank 'en' model")
-    
+
     # Add entity recognizer to model
     # nlp.create_pipe works for built-ins that are registered with spaCy
     ner = nlp.create_pipe('ner')
     nlp.add_pipe(ner)
-    
+
     ner.add_label("location")   # add new entity label to entity recognizer
-    
+
     # convert labeled data into a string to tokenize it into docs
     labeled_data_str = "\n".join(labeled_data)
     labeled_data_docs = labeled_data_str.split("\n\n")
 
-    print "Training model: iterations #: ", 
-    
+    print "Training model: iterations #: ",
+
     # get names of other pipes to disable them during training
     other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner']
     with nlp.disable_pipes(*other_pipes):  # only train NER
         optimizer = nlp.begin_training()
         for itn in range(n_iter):
-            
+
             print itn,
-            
+
             for d in labeled_data_docs:
                 losses = {}
 
                 words, iob_ents = zip(*[line.split('\t') for line in d.split("\n")])
                 doc = Doc(nlp.vocab, words)
-                                
+
                 gold = GoldParse(doc, entities=iob_ents)
                 nlp.update([doc], [gold], drop=0.5, sgd=optimizer, losses=losses)
-                
+
                 #print(losses)
         print
 
-        
+
     location_model.to_disk("location_model_spacy.ner")
-    
+
     return nlp
 ```
 
@@ -283,39 +277,39 @@ for ent in doc.ents:
 from spacy.scorer import Scorer
 
 def evaluate(ner_model, labeled_data):
-    
+
     nlp = spacy.blank('en')  # create blank Language class
-    
+
     # convert labeled data into a string to tokenize it into docs
     labeled_data_str = "\n".join(labeled_data)
     labeled_data_docs = labeled_data_str.split("\n\n")
-        
+
     scorer = Scorer()
-    
+
     for d in labeled_data_docs:
         words, iob_ents = zip(*[line.split('\t') for line in d.split("\n")])
-        
+
         # Tokenizers are different therefore will cause a problem. Following is one of the examples:
         #words = [x.replace("-", "") for x in words]
-        
+
         #doc = Doc(nlp.vocab, words)
         doc = " ".join(words)
-        
+
         doc_gold_text = ner_model.make_doc(unicode(doc))
-        
+
         try:
             gold = GoldParse(doc_gold_text, entities=iob_ents)
-        
+
             pred_value = ner_model(unicode(doc))
-            
+
             print pred_value.ents
-            
-            
+
+
             scorer.score(pred_value, gold)
         except:
             # ignore the problems caused by the tokenizer due to how our data was tokenized
             pass
-        
+
     return scorer.scores
 ```
 
@@ -1526,5 +1520,3 @@ evaluate(location_model, WNUT17_test)
      u'tags_acc': 0.0,
      u'token_acc': 100.0,
      u'uas': 0.0}
-
-
