@@ -1,7 +1,8 @@
 ---
-title:  "Geotutorial: Location Extraction using Supervised Models (Notebook-1)"
-date:   2018-03-24 22:49:00
-description: Hands-on Session in our Geo-tutorial at The International Conference of Information Systems for Crisis Response and Management (ISCRAM) 2018 at Rochester Institute of Technology (RIT), Rochester, NY.
+title: Geotutorial: Location Extraction using Supervised Models (Notebook-1)
+author: Hussein S. Al-Olimat
+source: "github.com/halolimat"
+
 ---
 
 ### Dataset we will be using:
