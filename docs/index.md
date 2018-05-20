@@ -84,7 +84,7 @@ In this tutorial, we present the general problem of georeferencing and location 
 
 ## Slides
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQtZEjh0opvjyNDra19JLgFq5EO6AY7VxYNQrsbPQIGwgi7fH0u38xilTRfIcAe40fexgVU0XK-gV6k/embed?start=false&loop=false&delayms=3000" frameborder="0" width="80%" height="535px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT38WjLamxvnlBwuOc8IArh1b7yu4iR15rWtjro9Z8NYFgH4Rmyyf4h-AmZT52S7iDxn6w9wQfr7yw3/embed?start=false&loop=false&delayms=3000" frameborder="0" width="80%" height="535px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Codes
 
