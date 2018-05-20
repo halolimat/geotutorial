@@ -37,15 +37,46 @@ In this tutorial, we present the general problem of georeferencing and location 
 
 # TUTORIAL SCHEDULE
 
-| Time &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
-| ---------------- | ---------------------------------------------------------- |
-| 9:00am - 10:00am | Motivate the location inference problem and introduce the concepts behind geospatial context and location-based techniques and applications. |
-| 10:00am - 10:30am | Break |
-| 10:30am - 12:00pm | More detailed technical and state-of-the-art technology for georeferencing and geocoding from social media texts and networks. We will discuss specific applications and future directions in the field. |
-| 12:00pm - 1:00pm | Lunch |
-| 1:00pm - 2:30pm | Continuing the last session topics |
-| 2:30pm - 3:00pm | Break |
-| 3:00pm - 4:00pm | Hands-on Session |
+<table>
+<col width="120">
+<col width="260">
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9:00am - 10:00am</td>
+      <td>Motivate the location inference problem and introduce the concepts behind geospatial context and location-based techniques and applications.</td>
+    </tr>
+    <tr>
+      <td>10:00am - 10:30am</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>10:30am - 12:00pm</td>
+      <td>More detailed technical and state-of-the-art technology for georeferencing and geocoding from social media texts and networks. We will discuss specific applications and future directions in the field.</td>
+    </tr>
+    <tr>
+      <td>12:00pm - 1:00pm</td>
+      <td>Lunch</td>
+    </tr>
+    <tr>
+      <td>1:00pm - 2:30pm</td>
+      <td>Continuing the last session topics</td>
+    </tr>
+    <tr>
+      <td>2:30pm - 3:00pm</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>3:00pm - 4:00pm</td>
+      <td>Hands-on Session</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
