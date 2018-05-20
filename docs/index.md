@@ -101,7 +101,7 @@ In this tutorial, we present the general problem of georeferencing and location 
 
 ---
 
-# TUTORIAL PRESENTERS
+# TUTORIAL PRESENTERS AND COLLABORATORS
 
 ## Hussein S. Al-Olimat
 * hussein@knoesis.org
