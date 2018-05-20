@@ -88,7 +88,7 @@ In this tutorial, we present the general problem of georeferencing and location 
 
 ## Codes
 
-* [<img src="https://raw.githubusercontent.com/halolimat/LNEx/master/LNEx_logo.png" style="width:80px;">](https://github.com/halolimat/LNEx)
+* [<img src="https://raw.githubusercontent.com/halolimat/LNEx/master/LNEx_logo.png" style="width:80px;">](https://github.com/halolimat/LNEx){:target="_blank"}
 
 * Jupyter Notebook 1: Geotutorial_Location_Extraction_Supervised_Models_(Notebook-1).ipynb
 
@@ -96,7 +96,7 @@ In this tutorial, we present the general problem of georeferencing and location 
 
 ## Data
 
-* [<img src="https://wwwdb.inf.tu-dresden.de/opendatasurvey/img/opendata1.png" style="width:180px;">](https://drive.google.com/drive/u/1/folders/1g_We4a17x3OkcE8CTSF8_MtvPouZ6CMz)
+* [<img src="https://wwwdb.inf.tu-dresden.de/opendatasurvey/img/opendata1.png" style="width:180px;">](https://drive.google.com/drive/u/1/folders/1g_We4a17x3OkcE8CTSF8_MtvPouZ6CMz){:target="_blank"}
 
 
 ---
