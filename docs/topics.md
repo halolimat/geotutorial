@@ -1,5 +1,5 @@
 ---
-title:  II- Topics
+title:  B- Topics
 date: 2018-03-24 22:49:00
 description: Our Geo-tutorial at The International Conference of Information Systems for Crisis Response and Management (ISCRAM) 2018 at Rochester Institute of Technology (RIT), Rochester, NY.
 ---
