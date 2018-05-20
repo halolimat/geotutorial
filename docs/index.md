@@ -38,7 +38,7 @@ In this tutorial, we present the general problem of georeferencing and location 
 # TUTORIAL SCHEDULE
 
 <table>
-<col width="120">
+<col width="40">
 <col width="260">
   <thead>
     <tr>
