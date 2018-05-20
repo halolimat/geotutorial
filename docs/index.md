@@ -37,7 +37,7 @@ In this tutorial, we present the general problem of georeferencing and location 
 
 # TUTORIAL SCHEDULE
 
-| Time | Description |
+| Time &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
 | ---------------- | ---------------------------------------------------------- |
 | 9:00am - 10:00am | Motivate the location inference problem and introduce the concepts behind geospatial context and location-based techniques and applications. |
 | 10:00am - 10:30am | Break |
